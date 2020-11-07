@@ -1,0 +1,28 @@
+// Basic
+@import './basics/variables';
+@import './basics/functions';
+@import './basics/mixins';
+@import './basics/typography';
+@import './basics/base';
+@import './basics/helpers';
+
+// Cmps
+@import './cmps/navbar';
+@import './cmps/footer';
+@import './cmps/user-info';
+@import './cmps/quiz';
+@import './cmps/quiz-conclusion';
+@import './cmps/code-snippet';
+@import './cmps/user-info-preview';
+@import './cmps/live-chat';
+@import './cmps/search-panel';
+
+// Pages
+@import './pages/home-page';
+@import './pages/quiz-page';
+@import './pages/auth-page';
+@import './pages/user-profile-page';
+@import './pages/edit-profile-page';
+@import './pages/err-page';
+@import './pages/add-question-page';
+@import './pages/rank-page';

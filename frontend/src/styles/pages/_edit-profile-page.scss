@@ -1,0 +1,94 @@
+.edit-profile-page {
+    margin: 5vh auto;
+    width: 90%;
+    border: none;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    padding: 20px;
+    background-color: #fff;
+    header {
+        padding: 20px;
+        margin-block-end: 20px;
+        background-image: $bg-clr;
+        border-radius: 8px;
+        div {
+            width: 100%;
+            img {
+                width: 80px;
+                height: 80px;
+                align-self: center;
+                margin: 0 10px;
+                border-radius: 4px;
+            }
+            .title {
+                font-size: 1.5rem;
+                font-family: MulishExtraBold, sans-serif;
+                color: #fff;
+            }
+        }
+    }
+    form {
+        margin: 0 auto;
+        .uploader-label-wrapper {
+            margin-block-end: 30px;
+
+            .uploader {
+                cursor: pointer;
+                width: fit-content;
+                background-color: $clr1;
+                color: #fff;
+                font-family: Mulish, sans-serif;
+                border-radius: 4px;
+                font-size: 1rem;
+                padding: 8px;
+                margin-inline-end: 5px;
+                transition: 0.2s;
+                &:hover {
+                    background-color: lighten($clr1, 10%);
+                }
+            }
+            .tip-icon {
+                font-size: 1.3rem;
+                cursor: pointer;
+            }
+        }
+        .img-uploader {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+        label:not(.uploader) {
+            width: 100%;
+            margin-block-end: 30px;
+            span {
+                text-transform: uppercase;
+                margin-block-end: 5px;
+                font-weight: bold;
+            }
+            input {
+                border: 1px solid rgb(209, 209, 209);
+            }
+            > *:not(span) {
+                font-family: Mulish, sans-serif;
+                border-radius: 4px;
+                font-size: 1rem;
+                padding: 8px;
+            }
+            textarea {
+                resize: none;
+                border: 1px solid rgb(209, 209, 209);
+            }
+        }
+        .btns {
+            text-align: end;
+            .submit-btn {
+                @include for-button;
+                border: none;
+                margin-inline-end: 10px;
+            }
+            .cancel-btn {
+                @include for-secondary-button;
+            }
+        }
+    }
+}

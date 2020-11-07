@@ -1,0 +1,110 @@
+.quiz-conclusion {
+    width: 90%;
+    margin: 5vh auto;
+    box-shadow: $shadow;
+    padding: 20px;
+    .title {
+        text-align: center;
+        font-size: 1.5rem;
+        background-image: $bg-clr;
+        font-family: MulishExtraBold, sans-serif;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-block-end: 20px;
+    }
+    section {
+        .score-container,
+        .reward-container {
+            text-align: center;
+        }
+        .stats-wrapper {
+            border-block-end: 1px solid rgb(224, 224, 224);
+            padding-block-end: 20px;
+            margin-block-end: 20px;
+            > * {
+                width: 200px;
+                font-weight: bold;
+            }
+            .user-preview {
+                .user-info-preview {
+                    img {
+                        align-self: flex-start;
+                    }
+                    .name-container {
+                        .name {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+            .score-container {
+                .score {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+            }
+            .user-reward {
+                .points img {
+                    width: 20px;
+                    margin-inline-start: 10px;
+                }
+                .reward {
+                    font-size: 1.5rem;
+                    margin-inline-start: 5px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .wrong-quest-header {
+            margin-block-end: 10px;
+            font-weight: bold;
+        }
+        .wrong-questions {
+            @include for-scroll-bar;
+            background-color: #fff;
+            margin-block-end: 20px;
+            border-radius: 8px;
+            padding: 20px;
+            max-height: 50vh;
+            overflow-y: auto;
+            .question-container:not(:last-child) {
+                margin-block-end: 5vh;
+                border-block-end: 1px solid rgb(230, 230, 230);
+            }
+            .user-info-preview {
+                align-self: flex-end;
+            }
+            .user-preview-wrapper {
+                align-self: flex-end;
+            }
+            .badge-container {
+                font-weight: bold;
+                img {
+                    width: 50px;
+                    margin-inline-start: 5px;
+                }
+            }
+        }
+    }
+    .homepage-btn {
+        margin: 0 auto;
+        @include for-secondary-button;
+    }
+
+    @media only screen and (max-width: 570px) {
+        .stats-wrapper {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            > * {
+                margin-block-end: 10px;
+            }
+            .user-preview {
+                .user-info-preview {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

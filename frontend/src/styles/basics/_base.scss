@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    width: 100vw;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    font-family: MulishLight, sans-serif;
+    background-color: #fff;
+    overflow-x: hidden;
+    @include for-scroll-bar;
+    * {
+        &::selection {
+            background-color: $clr1;
+            color: white;
+        }
+    }
+}
+
+button {
+    font-family: Mulish, 'sans-serif';
+    &:hover {
+        cursor: pointer;
+    }
+}
+input {
+    font-family: Mulish, 'sans-serif';
+}
+select {
+    &:hover {
+        cursor: pointer;
+    }
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #000000;
+}
+p {
+    margin: 0;
+}
+h1 {
+    margin: 0;
+}
+.app {
+    min-height: 100vh;
+}

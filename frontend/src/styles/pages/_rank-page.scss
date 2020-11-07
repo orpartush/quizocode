@@ -1,0 +1,137 @@
+.rank-page {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: $shadow;
+    height: auto;
+    max-height: 85vh;
+    margin: 5vh auto;
+    padding: 20px;
+    header {
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        background-image: $bg-clr;
+        width: 100%;
+        border-radius: 8px;
+        font-family: MulishExtraBold;
+        font-size: 1.4rem;
+        margin-block-end: 20px;
+    }
+    .search-container {
+        > * {
+            margin: 0 auto 10px;
+        }
+    }
+    .users-list {
+        @include for-scroll-bar;
+        max-height: 50vh;
+        overflow-y: auto;
+        padding: 20px;
+        > *:not(:last-child) {
+            border-block-end: 0.5px solid rgb(230, 230, 230);
+        }
+        .user {
+            .main-info {
+                img {
+                    align-self: center;
+                    width: 70px;
+                    border-radius: 4px;
+                    margin-inline-end: 20px;
+                }
+                padding: 10px 0;
+                .user-details {
+                    width: rem(200px);
+                    .name {
+                        font-weight: bold;
+                        margin-block-end: 2.5px;
+                    }
+                    .role {
+                        font-size: 0.9rem;
+                        margin-block-end: 2.5px;
+                    }
+                    .badges {
+                        img {
+                            width: 25px;
+                            margin-inline-end: 5px;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+            .user-states {
+                .points,
+                .likes {
+                    align-items: center;
+                    font-size: 0.9rem;
+                }
+                .points img,
+                .likes img {
+                    width: 30px;
+                    margin: 0;
+                }
+                .points {
+                    margin-inline-end: 20px;
+                }
+            }
+            .check {
+                a {
+                    @include for-button;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 960px) {
+        width: 90%;
+    }
+
+    @media only screen and (max-width: 670px) {
+        .search-container {
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .users-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            .user {
+                border: 1px solid rgb(230, 230, 230);
+                border-radius: 8px;
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                > * {
+                    margin-block-end: 5px;
+                }
+                .main-info {
+                    display: flex;
+                    text-align: center;
+                    flex-direction: column;
+                    img {
+                        width: 150px;
+                        margin: 0 0 5px 0;
+                    }
+                    .user-details {
+                        .badges {
+                            margin: 0 auto;
+                        }
+                    }
+                }
+                .user-states {
+                    .points img,
+                    .likes img {
+                        width: 25px;
+                    }
+                }
+                .check {
+                    a {
+                        margin-block-end: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

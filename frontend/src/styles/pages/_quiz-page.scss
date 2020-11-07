@@ -1,0 +1,18 @@
+.quiz-page {
+    margin: 5vh auto;
+    width: 100%;
+    header {
+        padding-inline-start: 20px;
+        margin-block-end: 20px;
+        h1 {
+            font-size: 1.5rem;
+            color: $clr1;
+        }
+        .progress-container {
+            .progress-bar {
+                width: 100px;
+                margin-inline-end: 5px;
+            }
+        }
+    }
+}

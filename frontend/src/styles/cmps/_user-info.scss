@@ -1,0 +1,112 @@
+.user-info {
+    background-color: #fff;
+    box-shadow: $shadow;
+    border-radius: 5px;
+    padding: 10px;
+    margin-block-end: 20px;
+    * .title {
+        text-align: start;
+        margin-block-end: 10px;
+        font-size: 1rem;
+        font-family: Mulish, sans-serif;
+    }
+    .overview {
+        .wrapper {
+            margin-block-end: 15px;
+            .techs-container,
+            .summery-container {
+                padding: 10px;
+                border-block-end: 1px solid rgb(230, 230, 230);
+                word-spacing: 2.5px;
+            }
+            .techs-container {
+                .user-tech {
+                    font-family: JetBrain, sans-serif;
+                    font-size: 0.8rem;
+                    margin: 0 auto;
+                    p {
+                        margin-inline-end: 15px;
+                        &::after {
+                            content: ',';
+                        }
+                    }
+                    :last-child {
+                        &::after {
+                            content: '.';
+                        }
+                    }
+                }
+            }
+            .summery-container {
+                .title {
+                    margin-block-end: 10px;
+                }
+                .summery {
+                    font-size: 0.9rem;
+                    margin: 0 auto;
+                    text-align: start;
+                    white-space: pre-line;
+                }
+            }
+        }
+        .knowledge {
+            .completed-quiz {
+                margin-inline-end: 15px;
+                img {
+                    width: 80px;
+                }
+                span {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+    .uploads {
+        .title {
+            margin-block-end: 10px;
+        }
+        .questions-container {
+            @include for-scroll-bar;
+            max-height: 45vh;
+            overflow-y: auto;
+            .question-container {
+                width: 95%;
+                margin: 0 auto;
+                border-block-end: 1px solid rgb(199, 199, 199);
+                .question {
+                    margin: 10px 0;
+                }
+                &:last-child {
+                    border: none;
+                }
+                .question-code {
+                    text-align: start;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 620px) {
+        .overview {
+            .wrapper {
+                flex-direction: column;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 420px) {
+        .overview {
+            .knowledge {
+                .completed-quiz {
+                    img {
+                        width: 12vw;
+                    }
+                    span {
+                        font-size: 4vw;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+.auth-page {
+    background-image: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    padding: 20px;
+    width: fit-content;
+    padding: 5vh 5vw;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    h1 {
+        align-self: center;
+        font-family: MulishExtraBold, sans-serif;
+        color: $clr1;
+        margin-block-end: 2vh;
+    }
+    form {
+        input,
+        button {
+            margin: 5px;
+            border-radius: 5px;
+            padding: 10px 5px;
+            background-color: $bg-clr;
+            border: 1px solid rgb(204, 204, 204);
+            width: 300px;
+        }
+        input[type='password'] {
+            margin-block-end: 10px;
+        }
+        .errs-container {
+            * {
+                color: $clr1;
+            }
+        }
+        button {
+            @include for-button;
+            width: 300px;
+            // width: auto;
+            border: none;
+        }
+        small {
+            margin-inline-start: 5px;
+            color: rgb(187, 187, 187);
+            > * {
+                color: rgb(187, 187, 187);
+                transition: 0.2s;
+                &:hover {
+                    color: $clr1;
+                    text-decoration: underline;
+                }
+            }
+            span {
+                cursor: pointer;
+            }
+        }
+    }
+    .login-form .super-guest {
+        width: 300px;
+        margin-block-start: 10px;
+        font-size: 0.8rem;
+        .super-guest-desc {
+            span {
+                text-align: center;
+                margin-block-end: 10px;
+            }
+            .tip-icon-wrapper {
+                font-size: 1rem;
+                cursor: pointer;
+                color: $txt-clr;
+            }
+            .tooltip {
+                max-width: 250px;
+            }
+        }
+        .super-guest-btn {
+            @include for-button;
+            border: none;
+        }
+    }
+
+    @media only screen and (max-width: 430px) {
+        width: 90%;
+        form {
+            input,
+            button {
+                width: 200px;
+            }
+        }
+        .login-form .super-guest {
+            width: 200px;
+            .super-guest-btn {
+                @include for-button;
+                border: none;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

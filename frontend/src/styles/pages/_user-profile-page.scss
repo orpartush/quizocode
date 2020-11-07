@@ -1,0 +1,81 @@
+.user-profile-page {
+    margin: 8vh auto;
+    background-color: #fff;
+    width: 90%;
+    min-height: 80vh;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    header {
+        position: relative;
+        top: -30px;
+        .profile-img {
+            width: 150px;
+            height: 150px;
+        }
+        .name-container {
+            .name {
+                font-weight: bold;
+                font-size: 1.4rem;
+            }
+            .edit-btn {
+                color: $clr1;
+                border-radius: 2px;
+                font-size: 1.5rem;
+                transition: 0.2s;
+                &:hover {
+                    color: lighten($clr1, 10%);
+                }
+            }
+        }
+        .role {
+            margin-block-end: 5px;
+        }
+        .awards {
+            cursor: default;
+            .points,
+            .likes {
+                align-items: center;
+                font-size: 0.9rem;
+            }
+            .points img,
+            .likes img {
+                width: 20px;
+                margin-inline-end: 5px;
+            }
+            .points {
+                margin-inline-end: 20px;
+            }
+        }
+    }
+    main {
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto;
+        .info-btns {
+            margin-block-end: 15px;
+            button {
+                border: none;
+                outline: none;
+                background-color: #fff;
+                font-size: 1rem;
+                color: $txt-clr;
+                transition: 0.2s ease-out;
+            }
+        }
+        .edit-btn {
+            background-color: $clr1;
+            color: $bg-clr;
+            padding: 5px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 3px;
+            transition: 0.2s ease-out;
+            &::before {
+                content: '✏️';
+            }
+            &:hover {
+                background-color: darken($clr1, 3%);
+            }
+        }
+    }
+}

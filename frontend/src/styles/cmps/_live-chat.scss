@@ -1,0 +1,66 @@
+.live-chat {
+    width: 90%;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    background-color: #fff;
+    .msgs-container {
+        overflow-y: auto;
+        @include for-scroll-bar;
+        .msg-container {
+            padding: 8px;
+            border-radius: 8px;
+            overflow-x: hidden;
+            .img-container {
+                margin-inline-end: 5px;
+                img {
+                    max-width: 40px;
+                    border-radius: 8px;
+                }
+            }
+            div {
+                max-width: 100%;
+                .from-details {
+                    .username {
+                        font-weight: bold;
+                        margin-inline-end: 5px;
+                    }
+                    .time {
+                        align-self: flex-end;
+                        color: rgb(114, 114, 114);
+                    }
+                }
+                .msg {
+                    .txt {
+                        font-size: 0.9rem;
+                        overflow-wrap: break-word;
+                    }
+                }
+            }
+        }
+    }
+    form {
+        background-image: $bg-clr;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        padding: 8px;
+        width: 100%;
+        input {
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            margin-inline-end: 0.5vw;
+        }
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.2rem;
+            color: rgb(44, 44, 44);
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

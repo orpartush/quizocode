@@ -1,0 +1,105 @@
+.quiz {
+    width: 90%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: $shadow;
+    padding: 20px;
+    margin: 0 auto;
+    margin-block-end: 20px;
+    form {
+        height: auto;
+        .question-container {
+            .question {
+                font-size: 1.3rem;
+                font-weight: bold;
+                margin-block-end: 10px;
+                .like-btn {
+                    border: none;
+                    background-color: #fff;
+                    font-size: 1.4rem;
+                    color: $clr1;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .options {
+            margin-block-end: 20px;
+            label {
+                font-size: 1.1rem;
+                border-radius: 8px;
+                box-shadow: 0px 0px 10px -1px rgb(219, 219, 219);
+                padding: 10px;
+                margin: 5px 0;
+                &:hover {
+                    cursor: pointer;
+                }
+                input {
+                    margin-inline-end: 10px;
+                }
+            }
+        }
+        .btns-author-container {
+            .btns {
+                margin: 0 auto;
+                > * {
+                    margin: 0 5px;
+                    padding: 5px 10px;
+                    border: none;
+                    border-radius: 3px;
+                    font-size: 1rem;
+                    transition: 0.2s ease-out;
+                }
+                .next-btn {
+                    @include for-button;
+                }
+                .quit-btn {
+                    @include for-secondary-button;
+                    padding: 8px 16px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 490px) {
+        form {
+            .question-container {
+                .question {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    margin-block-end: 10px;
+                    .like-btn {
+                        border: none;
+                        background-color: #fff;
+                        font-size: 1.4rem;
+                        color: $clr1;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .options {
+                label {
+                    font-size: 1rem;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    input {
+                        margin-inline-end: 10px;
+                    }
+                }
+            }
+            .btns-author-container {
+                flex-direction: column;
+                justify-content: flex-start;
+                // align-items: flex-start;
+                .btns {
+                    // margin: 0;
+                    order: 2;
+                }
+            }
+        }
+    }
+}

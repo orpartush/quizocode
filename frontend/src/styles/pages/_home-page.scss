@@ -1,0 +1,180 @@
+.home-page {
+    color: $txt-clr;
+    width: 100%;
+    .hero-wrapper {
+        background-image: $bg-clr;
+        width: 100vw;
+        margin-block-end: 10vh;
+        .hero {
+            padding: 20px 0;
+            width: 100%;
+            height: 70vh;
+            .title {
+                font-size: 5rem;
+                font-family: MulishExtraBold, sans-serif;
+            }
+            .sub-title {
+                font-size: 1.8rem;
+                font-family: MulishLight, sans-serif;
+            }
+        }
+    }
+    main,
+    .add-questions {
+        padding: 20px;
+    }
+    main {
+        width: 100%;
+        min-height: 100vh;
+        .categories-container {
+            margin-block-end: 20vh;
+            .featured {
+                align-self: flex-start;
+                font-size: 1.5rem;
+                font-family: Mulish, sans-serif;
+                padding: 10px;
+            }
+            .categories {
+                width: 100%;
+                > * {
+                    box-shadow: $shadow;
+                    border-radius: 8px;
+                    color: $txt-clr;
+                    margin: rem(10px);
+                    width: fit-content;
+                    font-size: rem(18px);
+                    padding: 10px;
+                    border-radius: 4px;
+                    transition: 0.2s ease-out;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+                img {
+                    max-width: 150px;
+                    margin-inline-end: 10px;
+                }
+                .quiz-name {
+                    font-family: Mulish, sans-serif;
+                }
+                .questions-length {
+                    font-family: MulishLight, sans-serif;
+                }
+            }
+        }
+        .about .title,
+        .instructions .title {
+            font-size: 2rem;
+            margin-block-end: 10px;
+            font-family: Mulish, sans-serif;
+        }
+        .about {
+            margin-block-end: 10vh;
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .instructions {
+            .info {
+                margin-block-end: 10vh;
+                font-size: 1.5rem;
+                .line {
+                    margin-block-end: 20px;
+                    .icon {
+                        margin-inline-end: 10px;
+                        color: $clr1;
+                    }
+                    a {
+                        color: $clr1;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .add-questions {
+        margin-block-end: 10vh;
+        .add-intro {
+            font-size: 1.5rem;
+            font-family: Mulish, sans-serif;
+            text-align: center;
+            margin-block-end: 20px;
+        }
+        .add-btn {
+            @include for-button;
+            font-size: 1.5rem;
+            padding: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 700px) {
+        .hero-wrapper {
+            .hero {
+                .title {
+                    font-size: 4rem;
+                }
+                .sub-title {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+        main {
+            .about .title,
+            .instructions .title {
+                font-size: 1.6rem;
+            }
+            .about {
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+            .instructions {
+                .info {
+                    margin-block-end: 10vh;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+        .add-questions {
+            margin-block-end: 10vh;
+            .add-intro {
+                font-size: 1.1rem;
+                font-family: Mulish, sans-serif;
+                text-align: center;
+                margin-block-end: 20px;
+            }
+            .add-btn {
+                @include for-button;
+                font-size: 1.1rem;
+                padding: 20px;
+            }
+        }
+    }
+    @media only screen and (max-width: 450px) {
+        .hero-wrapper {
+            .hero {
+                .title {
+                    font-size: 15vw;
+                }
+                .sub-title {
+                    font-size: 4vw;
+                    font-weight: bold;
+                }
+            }
+        }
+        main {
+            .categories-container {
+                .featured {
+                    font-size: 1.5rem;
+                }
+                .categories {
+                    img {
+                        max-width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

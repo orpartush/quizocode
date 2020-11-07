@@ -1,0 +1,9 @@
+.err-page {
+    height: 60vh;
+    a {
+        transition: 0.2s ease-out;
+        &:hover {
+            color: $clr1;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.add-question-page {
+    margin: 5vh auto;
+    width: 90%;
+    * {
+        font-family: MulishLight, sans-serif;
+    }
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        background-image: $bg-clr;
+        font-family: MulishExtraBold, sans-serif;
+        color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-block-end: 20px;
+    }
+    form {
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 8px;
+        box-shadow: $shadow;
+        padding: 20px;
+        background-color: #fff;
+        width: 90%;
+        margin: 0 auto;
+
+        * input,
+        * textarea {
+            border: 1px solid rgb(209, 209, 209);
+            border-radius: 4px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        span {
+            font-weight: bold;
+            width: 150px;
+            margin: 0 5px 5px 0;
+            text-transform: uppercase;
+        }
+        textarea {
+            resize: none;
+        }
+        .snippet textarea {
+            font-family: JetBrain, sans-serif;
+        }
+        select {
+            font-size: 1rem;
+            border: 1px solid rgb(209, 209, 209);
+            border-radius: 4px;
+            padding: 5px;
+        }
+        section:not(.btns-container) {
+            margin-block-end: 20px;
+        }
+
+        .answers {
+            div {
+                textarea:not(:last-child) {
+                    margin-block-end: 10px;
+                }
+            }
+        }
+        .btns-container > * {
+            margin: 5px;
+            width: fit-content;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.2s ease-out;
+        }
+        .btns-container {
+            .publish-btn {
+                @include for-button;
+                padding: 8px 25px;
+            }
+            .cancel-btn {
+                @include for-secondary-button;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 340px) {
+        form {
+            .btns-container > * {
+                margin: 5px auto;
+                padding: 5px 10px;
+            }
+            .btns-container {
+                .publish-btn {
+                    @include for-button;
+                    padding: 5px 10px;
+                }
+                .cancel-btn {
+                    @include for-secondary-button;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.code-snippet {
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    @include for-scroll-bar;
+    > * {
+        font-family: JetBrain, sans-serif;
+        font-size: 0.7rem;
+    }
+}

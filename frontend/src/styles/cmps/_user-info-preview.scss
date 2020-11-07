@@ -1,0 +1,35 @@
+.user-info-preview {
+    width: fit-content;
+    border-radius: 8px;
+    padding: 5px;
+    &:hover {
+        cursor: pointer;
+    }
+    img {
+        border-radius: 8px;
+        max-width: 40px;
+        margin-inline-end: 10px;
+    }
+    .name-container {
+        .name {
+            align-self: start;
+            font-size: 0.8rem;
+            margin-block-end: 3px;
+        }
+    }
+    .user-states {
+        font-size: 0.7rem;
+        .points,
+        .likes {
+            font-size: 0.7rem;
+        }
+        .points img,
+        .likes img {
+            width: 15px;
+            margin-inline-end: 2px;
+        }
+        .points {
+            margin-inline-end: 5px;
+        }
+    }
+}
