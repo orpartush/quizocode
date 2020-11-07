@@ -19,3 +19,9 @@ Create your profile page and get badges by completing quizzes.
 <p align="center">
   <img src="http://i.epvpimg.com/iTmpdab.png" width="500" title="Quiz Example">
 </p>
+
+Add your own questions to any of the quizzes.  
+
+<p align="center">
+  <img src="http://i.epvpimg.com/Sptofab.png" width="500" title="Quiz Example">
+</p>
